@@ -4,6 +4,8 @@ use Menu\Items\Contents\Raw;
 use Menu\Items\Item;
 use Menu\Items\ItemList;
 use Menu\Menu;
+use PHPUnit\Util\XML;
+use PHPUnit\DOMNode;
 
 abstract class MenuTests extends \Orchestra\Testbench\TestCase
 {
