@@ -96,7 +96,7 @@ class Item extends MenuObject
    */
   public function setAfterContent($value)
   {
-    $this->beforeContent = $value;
+    $this->afterContent = $value;
     return $this;
   }
 
@@ -142,6 +142,9 @@ class Item extends MenuObject
     $value .= is_null($this->afterContent) ? '' : $this->afterContent;
 
     $this->addActiveClasses();
+    
+    unset($this->attributes['beforeContent']);
+    unset($this->attributes['afterContent']);
 
     // Render children if any
     if ($this->hasChildren()) {
